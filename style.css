@@ -1,5 +1,118 @@
 body {
-    padding: 16px;
-    padding-left: 64px;
-    padding-right: 64px;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.navbar-custom {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100px;
+}
+.navbar-custom a  {
+    transition: all 125ms ease-in-out;
+    font-weight: bold;
+    display: inline;
+    justify-content: space-around;
+    font-size: 4em;
+}
+.navbar-custom a:hover, button:hover {
+    position: relative;
+    bottom: -4px;
+}
+.footer-custom {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding-bottom: 5px;
+    background-color: lightblue;
+    font-size: 10px;
+}
+
+#startBtn {
+    display: flex;
+    background-color: floralwhite;
+    color: #007bff;
+    border: #007bff solid;
+    width: 60%;
+    height: 3em;
+    margin-top: 2em;
+    font-size: 3em;
+    justify-content: center;
+    align-items: center;
+}
+.answers-custom button{
+    display: flex;
+    margin: 10px;
+    background-color: white;
+    color: grey;
+    border: grey solid;
+    width: 350px;
+    height:120px;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.btn-primary {
+    transition: bottom 125ms ease-in-out;
+}
+
+div.answers-custom {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+.card {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 0.5em;
+    padding: 0;
+    font-size: 30px;
+    color: rgb(172, 31, 31);
+    border: none;
+}
+#next-question, #finish-quiz {
+    font-size: 2.5em;
+    border: grey solid;
+    border-radius: 15px;
+    width: 10em;
+    height: 2.5em;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: lightgray;
+    font-size: 35px;
+    margin-top: 10px;
+}
+h2 {
+    color: #007bff;
+    font-weight: 600;
+    position: relative;
+    margin-top: 3em;
+}
+h3 {
+    font-size: 3em;
+    margin: 2em;
+}
+.end-panel div{
+    display: flex;
+    justify-content: space-evenly; 
+    margin-top: 5em;   
+
+}
+#right-answer, #wrong-answer {
+    font-size: 2em;
 }

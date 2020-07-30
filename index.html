@@ -1,21 +1,58 @@
 <html>
     <head>
         <title>QuizApp</title>
+        <meta name="viewport" content ="width=device-width,initial-scale=1,user-scalable=yes" />
+        <meta charset="utf-8"/>
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
+        <script src="game.js"></script>
       </head>
     <body>
-     <h1>The awesome HTML Quiz!</h1>
-      <div class="card">
-        <div class="card-body">
-          In diesem Abschnitt wird eine Frage gestellt!
+      <nav class="navbar navbar-white bg-light text-info navbar-custom">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/quizlogo.png" width="60px" height="80px" class="d-inline-block align-top">
+          Quiz App
+        </a>
+      </nav>
+      
+     <h1>The great HTML Quiz!</h1>
+     <button onclick="startQuiz()" id="startBtn" class="btn btn-primary">Quiz starten!</button>
+      <div class="card d-none" id='card'>
+        <div class="progress" id='progress-bar'>
+          <div class="progress-bar" role="progressbar" id="progress-num" style='width: 0%;' aria-valuenow='0' aria-valuemin="0" aria-valuemax="100">25%</div>
+        </div>
+        <div class="card-body" id="question">
+          A question will be in here!
         </div>
       </div> 
-      <div class="mt-4">
-        <button class="btn btn-primary">Antwort A</button>
-        <button class="btn btn-primary">Antwort B</button>
-        <button class="btn btn-primary">Antwort C</button>
-        <button class="btn btn-primary">Antwort D</button>
+      <div class="alert alert-success d-none" id="right-answer">
+        Deine Antwort ist richtig!
+      </div>
+      <div class="alert alert-danger d-none" id="wrong-answer">
+        Ups! Versuch es noch einmal!
+      </div>
+      <div class="mt-4 answers-custom d-none" id="answers">
+        <button onclick="answer(1)" id="answer1" class="btn btn-primary"></button>
+        <button onclick="answer(2)" id="answer2" class="btn btn-primary"></button>
+        <button onclick="answer(3)" id="answer3" class="btn btn-primary"></button>
+        <button onclick="answer(4)" id="answer4" class="btn btn-primary"></button>
       </div> 
+      
+      <button onclick="nextQuestion()" id="next-question" class="btn btn-secondary d-none">Nächste Frage</button>
+      <button onclick="finishQuiz()" id="finish-quiz" class="btn btn-secondary d-none">Ergebnisse</button>
+      <div class='end-panel d-none' id='end-panel'>
+        <h2 id='congratulations'>Du hast den Quiz zu Ende geschafft, congratulations!</h2>
+        <h3 id='mistakes'></h3>
+      </div>
+      
+      <footer class="page-footer font-small blue footer-custom">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a target="_blank" href="https://leonardomichilena.world/"> LeonardoMichilena.world</a>
+        </div>
+        <!-- Copyright -->
+      
+      </footer>
     </body>
 </html>
