@@ -17,7 +17,6 @@ let questionPercent = 100 / questions.length;
 // Keep track of number of wrong answers 
 let questionsWrong = 0;
 
-
 // "add" or "remove" class 'd-none' by Id
 function displayYes(id){
     let iden= id;
